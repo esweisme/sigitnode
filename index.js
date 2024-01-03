@@ -19,6 +19,7 @@ app.get('/find', (req, res) => {
     const sql = `SELECT nama FROM mhs WHERE id = ${req.query.id}`
     console.log('find id: ', req.query.id)
     db.query( sql, (error, result) => {  
+        if (error) throw error
     response(200, result, "get data nama berdasar id", res)
     // res.send(result)
     })
