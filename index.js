@@ -29,6 +29,9 @@ app.post('/login', (req, res) => {
     res.send('berhasil login!!')
   })
 
+app.put("/", (req, res)=>{ })
+app.delete("/", (req, res)=>{ })
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
